@@ -8,5 +8,5 @@
 - 样式规范（如 CSS Modules/Tailwind）需在此补充细节。
 
 ## 文件记录
-- `global.css`: 全局基础样式与变量。
+- `global.css`: 定义 NJUPT 百事通主题调色板（砂、墨、暖橙）以及通用排版。
 - TODO: 记录其他样式文件。

@@ -8,5 +8,6 @@
 - 在此记录每个页面的入口文件和主要职责。
 
 ## 页面记录
-- `HomePage.tsx`: 默认示例页面，可扩展为欢迎/概览信息。
-- TODO: 继续记录其他页面。
+- `LoginPage.tsx`: 登录入口，复用 `AuthPage.module.css` 的视觉规范以及 `authStore` 登录动作。
+- `RegisterPage.tsx`: 账号注册页面，表单校验后调用注册接口并自动登录。
+- `ChatPage.tsx` / `ChatPage.module.css`: 受保护的主界面，包含侧边栏会话列表、消息流与输入器，集成 `chatSession`、`chatHistory` 与 `chat` API。

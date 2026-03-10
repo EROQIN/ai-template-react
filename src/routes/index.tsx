@@ -1,6 +1,23 @@
-import { HomePage } from '@/pages/HomePage';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { useAuthBootstrap } from '@/hooks/useAuthBootstrap';
+import { LoginPage } from '@/pages/LoginPage';
+import { RegisterPage } from '@/pages/RegisterPage';
+import { ChatPage } from '@/pages/ChatPage';
+import { ProtectedRoute } from '@/routes/ProtectedRoute';
 
 export const AppRoutes = () => {
-  // TODO: 在此集成 react-router 或其他路由方案
-  return <HomePage />;
+  useAuthBootstrap();
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<ChatPage />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };

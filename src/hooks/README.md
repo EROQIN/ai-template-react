@@ -8,4 +8,4 @@
 - 与外部服务交互的 Hook 请在此记录依赖与错误处理方案。
 
 ## Hook 记录
-- TODO: 记录可用 Hook 及其职责。
+- `useAuthBootstrap`: 在应用启动时触发 `fetchCurrentUser`，确保路由守卫可以依赖 `initialized` 状态。

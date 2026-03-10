@@ -8,4 +8,4 @@
 - 涉及持久化或跨标签页同步时，在此说明策略。
 
 ## Store 记录
-- TODO: 列出已实现 store 及其状态结构。
+- `authStore.ts`: 维护登录用户信息、加载态与初始化状态，提供 `login/register/logout/fetchCurrentUser` 等动作供路由守卫与页面调用。
